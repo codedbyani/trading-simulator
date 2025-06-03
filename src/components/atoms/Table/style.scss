@@ -1,0 +1,52 @@
+@import "scss/color";
+
+table {
+  width: 100%;
+
+  thead {
+    th {
+      color: rgba(128, 128, 128, 0.74);
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: 35px;
+
+      td {
+        color: white;
+        text-align: center;
+        min-width: 100px;
+
+        &:first-child {
+          text-align: left;
+        }
+
+        &:last-child {
+          width: 100px;
+        }
+
+        button {
+          margin: 0;
+          color: white;
+          padding: 5px 10px;
+          border: none;
+          outline: none;
+          font-size: 13px;
+          cursor: pointer;
+          background: #404347;
+          border-radius: 5px;
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            background: rgba(64, 67, 71, 0.72);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "scss/color";
+
+.button {
+  width: 100%;
+  flex: 1 1 0;
+  border: none;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 52px;
+  appearance: none;
+  font-weight: 500;
+  overflow: hidden;
+  min-height: 24px;
+  user-select: none;
+  padding: 6px 12px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  white-space: nowrap;
+  align-items: center;
+  font-family: inherit;
+  word-break: keep-all;
+  display: inline-flex;
+  text-decoration: none;
+  background-image: none;
+  justify-content: center;
+  text-overflow: ellipsis;
+  color: rgb(234, 236, 239);
+  transition: 0.2s ease-in-out;
+
+  &.one {
+    background-color: rgb(71, 77, 87);
+
+    &:hover {
+      background-color: rgba(71, 77, 87, 0.66);
+    }
+  }
+
+  &.two {
+    background-color: $main;
+
+    &:hover {
+      background-color: $main-opacity-05;
+    }
+  }
+}

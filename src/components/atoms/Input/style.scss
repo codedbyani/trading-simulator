@@ -1,0 +1,89 @@
+@import "scss/color";
+
+.input-block {
+
+  & > div {
+    position: relative;
+  }
+
+  &.clickable {
+    label {
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+
+  &.padding-more {
+    input {
+      padding-right: 30px !important;
+    }
+  }
+
+  label {
+    color: #adb1b8;
+    font-size: 12px;
+    line-height: 20px;
+
+    span {
+      font-size: 12px !important;
+      font-weight: 800;
+      transform: rotate(180deg);
+      display: inline-block;
+    }
+  }
+
+  &_right-text {
+    top: 10px;
+    right: 5px;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+  }
+}
+
+.input {
+  width: 100%;
+  color: white;
+  height: 35px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 16px;
+  caret-color: $main;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  transition: 0.2s ease-in-out;
+  background: rgba(128, 128, 128, 0.18);
+
+  &[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+
+  &:not(:disabled):hover {
+    border: 1px solid $main;
+  }
+
+  &:focus {
+    border: 1px solid $main;
+  }
+
+  &.error {
+    border: 1px solid red;
+  }
+
+  &:disabled {
+    background: rgb(71, 77, 87);
+    color: gray;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}

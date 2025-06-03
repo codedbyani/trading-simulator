@@ -1,0 +1,17 @@
+
+@import "scss/color";
+.tab {
+  &_item {
+    color: white;
+    padding: 5px;
+    font-size: 13px;
+    cursor: pointer;
+
+    &.active {
+      color: $main;
+      border-bottom: 1px solid $main !important;
+    }
+  }
+}
+
+

@@ -1,0 +1,48 @@
+@import "scss/color";
+
+.top-bar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  background-color: #00121f;
+  justify-content: space-between;
+  border-bottom: 1px solid #282c34;
+  border-bottom: 2px solid $main-opacity-05;
+
+  &_trading-types {
+    button {
+      color: white;
+      margin: 0 5px;
+      padding: 0 30px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.1s ease-in-out;
+
+      &:hover {
+        color: $main;
+      }
+
+      &.active {
+        color: $main;
+      }
+    }
+  }
+
+  &_settings {
+    button {
+      color: white;
+      transition: 0.2s ease-in-out;
+
+      &:hover{
+        color: $main;
+      }
+
+      svg{
+        width: 25px;
+        height: 22px;
+      }
+    }
+  }
+}

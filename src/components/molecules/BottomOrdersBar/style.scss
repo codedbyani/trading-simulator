@@ -1,0 +1,111 @@
+@import "scss/color";
+
+.bottom-order-bar {
+  background: #00121f;
+  height: 300px;
+
+  &_futures-orders, &_spot-orders {
+    display: flex;
+    flex-direction: column;
+
+    &_tabs {
+      background: #000a11;
+      display: flex;
+
+      span {
+        color: $main !important;
+        font-size: 16px !important;
+      }
+
+      .tab_item, span {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        color: #adb1b8;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0 15px;
+
+        &.active {
+          border-bottom: 2px solid $main !important;
+        }
+      }
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 40px);
+      overflow-x: hidden;
+
+      &_order-history, &_current-orders {
+        &_tabs {
+          background: #000a11;
+          display: flex;
+          padding: 6px;
+
+          .tab_item, span {
+            color: #adb1b8;
+            margin-right: 12px;
+          }
+        }
+      }
+
+      & > .TabContent {
+        max-height: 250px;
+        overflow: auto;
+        height: 100%;
+        position: relative;
+
+        td {
+          height: 50px;
+        }
+      }
+
+      .quantity {
+        color: $long;
+      }
+
+      .liquidity {
+        color: $main;
+      }
+
+      .realized {
+        color: $short;
+      }
+    }
+  }
+
+  &_spot-order {
+
+  }
+
+  .order-contract {
+    height: 35px;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+
+    span {
+      display: block;
+    }
+
+    &.green {
+      border-left: 2px solid $long;
+    }
+
+    &.red {
+      border-left: 2px solid $short;
+    }
+  }
+}
+
+.order-trade-type, .order-side-type {
+  &.green {
+    color: $long;
+  }
+
+  &.red {
+    color: $short;
+  }
+}

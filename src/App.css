@@ -1,0 +1,13 @@
+body{
+  background: #03253b !important;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /*For Firefox*/
+  scrollbar-width: thin;
+  scrollbar-color:  #0095FA rgba(0, 149, 250, 0.5);
+}

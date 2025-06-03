@@ -1,0 +1,17 @@
+.spot {
+  &_tabs {
+    display: flex;
+  }
+
+  &_market {
+    & > .input-range {
+      margin-bottom: 15px;
+    }
+  }
+
+  &_limit-order, &_market, &_stop-limit {
+    .sliderContainer, {
+      margin-bottom: 15px;
+    }
+  }
+}

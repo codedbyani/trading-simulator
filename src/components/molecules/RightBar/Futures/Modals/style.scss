@@ -1,0 +1,295 @@
+@import "scss/color";
+
+.futures-modal {
+  &_btns {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &_head-btns {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 48%;
+      border: none;
+      color: white;
+      padding: 6px 0;
+      cursor: pointer;
+      font-size: 14px;
+      min-height: 24px;
+      font-weight: 500;
+      border-radius: 3px;
+      background-color: rgb(71, 77, 87);
+
+      &:hover {
+        background-color: rgba(71, 77, 87, 0.69);
+      }
+
+      &.active {
+        border: 1px solid $main;
+      }
+    }
+  }
+
+  &_content {
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+
+    p {
+      margin: 16px 0;
+    }
+  }
+
+  &_adjust-levrage {
+    span {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: rgb(183, 189, 198);
+    }
+
+    input {
+      text-align: center;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      color: rgb(246, 70, 93);
+      margin: 15px 0;
+    }
+  }
+
+  &_order_placement_preferences, &_position-mode {
+
+    & > div:first-child {
+      margin-top: 20px;
+    }
+
+    &_check-item {
+      margin-bottom: 20px;
+
+      &_checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > div {
+          display: flex;
+          align-items: center;
+        }
+
+        span {
+          color: white;
+          display: block;
+          font-weight: 600;
+        }
+      }
+
+      p {
+        color: #adb1b8;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        margin-left: 35px;
+        margin-top: 5px;
+      }
+    }
+
+    &_note {
+      span {
+        font-size: 14px;
+        color: rgb(246, 70, 93);
+      }
+
+      p {
+        color: #71757a;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 5px 0 15px;
+      }
+    }
+  }
+
+  &_tpls {
+    &_header {
+      display: flex;
+      justify-content: space-between;
+
+      &_item {
+        &_label {
+          font-size: 12px;
+          color: #adb1b8;;
+        }
+
+        &_value {
+          color: white;
+          text-align: right;
+        }
+      }
+    }
+
+    &_trade-type {
+      display: flex;
+      margin: 20px 0;
+
+      &.Long {
+        button:first-child {
+          background-color: $long !important;
+
+          &:hover {
+            background-color: $long-hover !important;
+          }
+        }
+      }
+
+      &.Short {
+        button:last-child {
+          background-color: $short !important;
+
+          &:hover {
+            background-color: $short-hover !important;
+          }
+        }
+      }
+
+      button {
+        height: 28px;
+        font-size: 14xp;
+        font-weight: 500;
+
+        &:first-child {
+          background: #2d2d2f;
+        }
+
+        &:last-child {
+          background: #2d2d2f;
+        }
+      }
+    }
+
+    &_which_order {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: #adb1b8;
+        font-size: 16px;
+      }
+
+      span:last-child {
+        color: white;
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+
+    &_trigger-controller {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(113, 117, 122, 0.34);
+
+      &_inputs {
+        display: flex;
+        height: 35px;
+
+        & > div:first-child {
+          margin-right: 5px;
+          width: 60%;
+        }
+
+        & > div:last-child {
+          width: 40%;
+        }
+      }
+
+      &_info {
+        color: rgba(255, 0, 0, 0.57);
+        margin-top: 3px;
+        font-size: 12px;
+      }
+
+      &_calculated-info {
+        margin-top: 10px;
+        padding: 12px;
+        font-size: 12px;
+        line-height: 16px;
+        border-radius: 5px;
+        color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(113, 117, 122, 0.34);
+      }
+    }
+  }
+
+  &_risk-alert {
+    padding: 16px 0 36px;
+
+    p {
+      color: #adb1b8;
+      font-size: 14px;
+      font-weight: 22;
+    }
+  }
+
+  &_confirm-position {
+    margin-top: 10px;
+
+    &_filed-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      & > div:first-child {
+        color: #adb1b8;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      & > div:last-child {
+        color: white;
+        font-size: 14px;
+      }
+
+      &_tp-sl {
+        & > span:first-child {
+          color: #20b26c;
+        }
+
+        & > span:last-child {
+          color: #ef454a;
+        }
+      }
+
+      &.brand-color {
+        & > div:last-child {
+          color: $main;
+        }
+      }
+    }
+
+    &_tp-sl {
+      margin: 15px 0;
+    }
+  }
+
+  &_close-position {
+    &_market {
+      &_result {
+        padding: 12px;
+        margin: 20px 0;
+        font-size: 12px;
+        border-radius: 4px;
+        color: rgba(255, 255, 255, 0.4);
+        background: rgba(113, 117, 122, 0.34);
+      }
+    }
+  }
+}
